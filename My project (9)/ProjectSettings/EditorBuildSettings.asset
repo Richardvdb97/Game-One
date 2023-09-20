@@ -4,8 +4,17 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Terrain/Game 0ne.unity
+    guid: 3a7ae3e99f0b26f4d8fefd870f4cc091
   m_configObjects:
+    com.unity.adaptiveperformance.google.android.provider_settings: {fileID: 11400000,
+      guid: d51ad9adc10c3c54ba987a67965db7ec, type: 2}
+    com.unity.adaptiveperformance.loader_settings: {fileID: 11400000, guid: 49ee7f8a3e14e1544a72a7ddbcc02ba6,
+      type: 2}
+    com.unity.adaptiveperformance.samsung.android.provider_settings: {fileID: 11400000,
+      guid: 64ef0410bf47cce4ca164cae61ba868e, type: 2}
     com.unity.adaptiveperformance.simulator.provider_settings: {fileID: 11400000,
       guid: b3c248985fc75d9498528d6b8edd7d15, type: 2}
   m_UseUCBPForAssetBundles: 0

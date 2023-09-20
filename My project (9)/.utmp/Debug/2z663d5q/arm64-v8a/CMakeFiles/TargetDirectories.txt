@@ -1,0 +1,5 @@
+D:/Game-One/My project (9)/.utmp/Debug/2z663d5q/arm64-v8a/CMakeFiles/edit_cache.dir
+D:/Game-One/My project (9)/.utmp/Debug/2z663d5q/arm64-v8a/CMakeFiles/rebuild_cache.dir
+D:/Game-One/My project (9)/.utmp/Debug/2z663d5q/arm64-v8a/FramePacing/CMakeFiles/swappywrapper.dir
+D:/Game-One/My project (9)/.utmp/Debug/2z663d5q/arm64-v8a/FramePacing/CMakeFiles/edit_cache.dir
+D:/Game-One/My project (9)/.utmp/Debug/2z663d5q/arm64-v8a/FramePacing/CMakeFiles/rebuild_cache.dir
