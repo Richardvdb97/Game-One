@@ -6,6 +6,7 @@ using TMPro;
 public class DistanceRan : MonoBehaviour
 {
     public GameObject disDisplay;
+    public GameObject disEndDisplay;
     public int disRun;
     public bool addingDis = false;
     public float disDelay = 0.35f;
@@ -23,6 +24,7 @@ public class DistanceRan : MonoBehaviour
     {
         disRun += 1;
         disDisplay.GetComponent<TextMeshProUGUI>().text = "" + disRun;
+        disEndDisplay.GetComponent<TextMeshProUGUI>().text = "" + disRun;
         yield return new WaitForSeconds(disDelay);
         addingDis = false;
     }
