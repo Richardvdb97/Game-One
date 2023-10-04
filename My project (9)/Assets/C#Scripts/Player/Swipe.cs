@@ -7,58 +7,27 @@ using UnityEngine;
 
 public class Swipe : MonoBehaviour
 {
-    public Sprite PageImage;
-    public List<Sprite> Numbers;
-    public int PageNumber = 0;
+    private float speed = 0.01f;
+    private Touch touch;
+    public float moveSpeed = 3;
+    public float leftRightSpeed = 4;
 
-    public GameObject Player;
-
-    private Vector2 startTouchPosition;
-    private Vector2 endTouchPosition;
-
-    private void Update()
+    void Update()
     {
-        if(Input.touchCount > 0 && Input.GetTouch(0).phase == TouchPhase.Began)
+        transform.Translate(Vector3.forward * Time.deltaTime * moveSpeed, Space.World);
+        if (Input.touchCount > 0)
         {
-            startTouchPosition = Input.GetTouch(0).position;
-        }
+            touch = Input.GetTouch(0);
 
-        if(Input.touchCount > 0 && Input.GetTouch(0).phase == TouchPhase.Ended)
-        {
-            endTouchPosition = Input.GetTouch(0).position;
-
-            if(endTouchPosition.x < startTouchPosition.x)
+            if(touch.phase == TouchPhase.Moved)
             {
-                Right();
+                if(this.gameObject.transform.position.x > LevelBoundries.leftSide)
+                {
+                    transform.position = new Vector3(transform.position.x + touch.deltaPosition.x * speed, transform.position.y, transform.position.z);
+                }
+                transform.position = new Vector3(transform.position.x + touch.deltaPosition.x * speed, transform.position.y,transform.position.z);
             }
-
-            if(endTouchPosition.x > startTouchPosition.x)
-            {
-                Left();
-            }
-
-            
         }
-    }
-    /*private void PreviousPage()
-    {
-        PageNumber--;
-        PageImage.sprite = Numbers[PageNumber];
-    }
-
-    private void NextPage()
-    {
-        PageNumber++;
-        PageImage.sprite = Numbers[PageNumber];
-    }*/
-
-    private void Left()
-    {
-        Player.transform.position = new Vector3(Player.transform.position.x + 1, Player.transform.position.y, Player.transform.position.z);
-    }
-    private void Right()
-    {
-        Player.transform.position = new Vector3(Player.transform.position.x - 1, Player.transform.position.y, Player.transform.position.z);
     }
 }
 
