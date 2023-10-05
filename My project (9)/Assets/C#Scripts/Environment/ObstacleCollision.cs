@@ -12,7 +12,7 @@ public class ObstacleCollision : MonoBehaviour
     void OnTriggerEnter(Collider other)
     {
         this.gameObject.GetComponent<BoxCollider>().enabled = false;
-        thePlayer.GetComponent<PlayerMoveR>().enabled = false;
+        thePlayer.GetComponent<Swipe>().enabled = false;
         charModel.GetComponent<Animator>().Play("Falling Back Death");
         levelControl.GetComponent<DistanceRan>().enabled = false;
         bumpingSomething.Play();

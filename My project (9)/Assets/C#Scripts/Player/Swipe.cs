@@ -7,6 +7,7 @@ using UnityEngine;
 
 public class Swipe : MonoBehaviour
 {
+    
     private float speed = 0.01f;
     private Touch touch;
     public float moveSpeed = 3;
@@ -21,13 +22,13 @@ public class Swipe : MonoBehaviour
 
             if(touch.phase == TouchPhase.Moved)
             {
-                if(this.gameObject.transform.position.x > LevelBoundries.leftSide)
-                {
-                    transform.position = new Vector3(transform.position.x + touch.deltaPosition.x * speed, transform.position.y, transform.position.z);
-                }
-                transform.position = new Vector3(transform.position.x + touch.deltaPosition.x * speed, transform.position.y,transform.position.z);
+                
+                transform.position = new Vector3(transform.position.x + touch.deltaPosition.x * speed, transform.position.y, transform.position.z);
+
             }
+            
         }
+
     }
 }
 
